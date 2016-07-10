@@ -1,0 +1,119 @@
+@-webkit-keyframes rubberBand {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	30% {
+		-webkit-transform: scaleX(1.25) scaleY(0.75);
+		transform: scaleX(1.25) scaleY(0.75);
+	}
+
+	40% {
+		-webkit-transform: scaleX(0.75) scaleY(1.25);
+		transform: scaleX(0.75) scaleY(1.25);
+	}
+
+	60% {
+		-webkit-transform: scaleX(1.15) scaleY(0.85);
+		transform: scaleX(1.15) scaleY(0.85);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes rubberBand {
+	0% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+
+	30% {
+		-webkit-transform: scaleX(1.25) scaleY(0.75);
+		-ms-transform: scaleX(1.25) scaleY(0.75);
+		transform: scaleX(1.25) scaleY(0.75);
+	}
+
+	40% {
+		-webkit-transform: scaleX(0.75) scaleY(1.25);
+		-ms-transform: scaleX(0.75) scaleY(1.25);
+		transform: scaleX(0.75) scaleY(1.25);
+	}
+
+	60% {
+		-webkit-transform: scaleX(1.15) scaleY(0.85);
+		-ms-transform: scaleX(1.15) scaleY(0.85);
+		transform: scaleX(1.15) scaleY(0.85);
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+*{
+	transition: box-shadow 1.5s ease-in-out;
+	transition: transform 0.4s ease-out;
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease-out;
+}
+
+ul.box{
+	border: 1px solid #C8C3C3;
+	box-shadow: 0 0 5px black;
+	margin: -10px auto auto auto;
+	padding: 15px 15px 15px 25px;
+	display: table;
+	background-color: #FFF;
+	list-style-type: circle;
+	font-family:'Open Sans','Droid Sans',arial,sans-serif;
+}
+
+p.noteText{
+	margin: 25px auto auto auto;
+	display: table;
+	color: red;
+	text-shadow: 0 0 2px white;
+	padding: 5px;
+}
+
+ul.box:hover{
+	box-shadow: 0 0 25px Firebrick;
+	-webkit-animation-name: rubberBand;
+	animation-name: rubberBand;
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+ul.box:hover + p.noteText:after{
+	content: 'Note: All links are extremely experimental and should not be used or shared!';
+}
+
+span.date{
+	font-size: 8pt;
+	color: #797979;
+	float: right;
+	padding-top: 3px;
+	padding-left: 3px;
+}
+
+header{
+	margin: -35px auto auto auto;
+	display: table;
+}
+
+h1#title{
+	color:#333;
+	font-size:42px;
+	font-family:'Open Sans','Droid Sans',arial,sans-serif;
+	font-weight:300;
+	text-shadow: 0 0 2px #E0E0E0;
+}
